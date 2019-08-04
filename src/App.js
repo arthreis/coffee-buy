@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Provider } from 'react-redux';
 
 import store from './store';
@@ -9,8 +9,10 @@ import GlobalStyle from './styles/global';
 function App() {
     return (
         <Provider store={store}>
-            <GlobalStyle />
-            <Routes />
+            <Fragment>
+                <Routes />
+                <GlobalStyle />
+            </Fragment>
         </Provider>
     );
 }

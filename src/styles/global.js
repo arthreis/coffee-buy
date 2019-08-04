@@ -16,12 +16,20 @@ export default createGlobalStyle`
 
     body {
         font: 14px 'Roboto', sans-serif;
-        background: #ecf1f8;
-        color: #333;
+        background: #353940;
+        color: #fff;
         -webkit-font-smoothing: antialiase !important;
     }
 
     ul {
         list-style: none;
+    }
+
+    input, button {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    button {
+        cursor: pointer;
     }
 `;
