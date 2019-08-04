@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { buyService } from '~/services/buyService';
+import { buyService } from '../../services/buyService';
 
-import { OrderCard } from '~/component/orderCard';
+import OrderCard from '../../components/orderCard';
 
 export default class Home extends Component {
     state = {

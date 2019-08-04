@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
-export class OrderCard extends Component {
-
-    constructor(props){
+export default class OrderCard extends Component {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -11,8 +10,7 @@ export class OrderCard extends Component {
     }
 
     render() {
-
-        const {order} = this.state;
+        const { order } = this.state;
 
         return (
             <div key={order._id}>
