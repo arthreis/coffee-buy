@@ -1,7 +1,7 @@
-import api from "./api";
+import api from '~/services/api';
 
 export const buyService = {
-    getAllOrders(){
+    getAllOrders() {
         return api.get('/orders');
-    }
-}
+    },
+};
