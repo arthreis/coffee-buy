@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { buyService } from "./../../services/buyService";
 
+import { OrderCard } from "./../../component/orderCard";
+
 export default class Home extends Component {
 
     state = {
@@ -14,13 +16,17 @@ export default class Home extends Component {
 
     loadOrders = async () => {
         const response = await buyService.getAllOrders();
-        this.setState({orders: response});
+        this.setState({orders: response.data});
     }
 
     render() {
         return (
             <div>
-
+                {
+                    this.state.orders.map((order) => (
+                        <OrderCard order={order}/>
+                    ))
+                }
             </div>
         );
     }
