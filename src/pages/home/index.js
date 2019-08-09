@@ -24,7 +24,7 @@ export default class Home extends Component {
             <div>
                 {
                     orders.map(order => (
-                        <OrderCard order={order} />
+                        <OrderCard key={order._id} order={order} />
                     ))
                 }
             </div>
