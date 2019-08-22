@@ -4,6 +4,8 @@ import { buyService } from '../../services/buyService';
 
 import OrderCard from '../../components/orderCard';
 
+import { Container0, Container, Container2 } from './styles';
+
 export default class Home extends Component {
     state = {
         orders: [],
@@ -21,13 +23,19 @@ export default class Home extends Component {
     render() {
         const { orders } = this.state;
         return (
-            <div>
-                {
-                    orders.map(order => (
-                        <OrderCard key={order._id} order={order} />
-                    ))
-                }
-            </div>
+            <Container0>
+                <Container>
+                    {
+                        orders.map(order => (
+                            <OrderCard key={order._id} order={order} />
+                        ))
+                    }
+                </Container>
+
+                <Container2>
+                    2
+                </Container2>
+            </Container0>
         );
     }
 }
